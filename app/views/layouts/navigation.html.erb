@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <%= link_to "G & D", root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <%= content_tag :li, nil, class: "nav-item" do %>
+          <%= link_to t(:about), about_path, class: "nav-link" %>
+        <% end %>
+        <%= content_tag :li, nil, class: "nav-item" do %>
+          <%= link_to t(:our_boys), our_boys_path, class: "nav-link" %>
+        <% end %>
+        <%= content_tag :li, nil, class: "nav-item" do %>
+          <%= link_to t(:contact), contact_path, class: "nav-link" %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
