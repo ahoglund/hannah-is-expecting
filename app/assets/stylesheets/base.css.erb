@@ -22,6 +22,11 @@ body {
   -o-background-size: cover;
 }
 
+.bg-image-full h1 {
+  background-color: rgba(87, 86, 46, 0.3);
+  display: -webkit-inline-box;
+  padding: 3px;
+}
 .navbar {
   padding: 1.4rem;
 }
@@ -39,16 +44,20 @@ body {
   color: #36a97f !important;
 }
 
-.btn-warning {
-  background-color: #f3866b !important;
-  color: #fff;
-  border-color: #f3866b;
-}
-
 .text-warning {
   color: #f3866b !important;
 }
 
 .text-info {
   color: #174053 !important;
+}
+
+#header-image-default {
+  background-image: url(<%= asset_path('d-g-2') %>);
+  min-height: 500px;
+}
+
+#header-image-photos {
+  background-image: url(<%= asset_path('photos-header') %>);
+  min-height: 160px;
 }

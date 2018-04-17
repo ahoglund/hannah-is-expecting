@@ -18,21 +18,12 @@
     <%= render template: "layouts/navigation" %>
     <%= render template: "layouts/header" %>
     <!-- Content section -->
-    <section class="py-5">
-      <div class="container">
-        <%= yield %>
-      </div>
-    </section>
-    <%= content_tag :section, nil, class: "py-5 bg-image-full", style: "background-image: url('#{asset_path('family-1')}');" do %>
-      <div style="height: 1000px"></div>
+    <%= content_tag :section, nil, class: "py-5" do %>
+      <div class="container"><%= yield %></div>
     <% end %>
-    <section class="py-5">
-      <div class="container">
-      </div>
-    </section>
-    <%= content_tag :section, nil, class: "py-5 bg-image-full", style: "background-image: url('#{asset_path('d-1')}');" do %>
-      <div style="height: 1000px"></div>
-    <% end %>
+    <%# content_tag :section, nil, class: "py-5 bg-image-full", style: "background-image: url('#{asset_path('family-1')}');" do %>
+      <div style="height: 200px"></div>
+    <%# end %>
     <%= render template: "layouts/footer" %>
   </body>
 </html>

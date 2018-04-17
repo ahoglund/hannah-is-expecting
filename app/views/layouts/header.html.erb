@@ -1,16 +1,18 @@
-<%= content_tag :header, nil, class: "py-5 bg-image-full", style: "background-image: url('#{asset_path('d-g-1')}');" do %>
-  <div class="container">
-    <div class="row">
-      <div class="offset-sm-4 col-sm-4">
-        <%= content_tag :h1, "Adoption is our Destiny", class: "display-1 text-dark" %>
+<% if content_for?(:header_image) %>
+  <%= yield(:header_image) %>
+<% else %>
+  <%= content_tag :header, nil, class: "py-5 bg-image-full", id: "header-image-default" do %>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <%= content_tag :h1, t(:adoption_is_our_destiny), class: "display-1 text-dark" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">
+          <%= link_to "Learn More", our_story_path, class: "btn btn-warning" %>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="mx-auto col-sm-2">
-        <%= link_to "Learn More", about_path, class: "btn btn-warning" %>
-      </div>
-    </div>
-  </div>
-  <div style="height: 200px"></div>
+  <% end %>
 <% end %>
-
