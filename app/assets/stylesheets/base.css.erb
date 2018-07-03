@@ -54,10 +54,37 @@ body {
 
 #header-image-default {
   background-image: url(<%= asset_path('d-g-2') %>);
-  min-height: 500px;
+  height: 420px;
+}
+#header-image-default .display-1 {
+  font-size: 24px;
 }
 
 #header-image-photos {
   background-image: url(<%= asset_path('photos-header') %>);
-  min-height: 160px;
+  min-height: 200px;
 }
+
+@media (min-width: 768px) {
+  #header-image-default {
+    height: 500px;
+  }
+  #header-image-default .display-1 {
+    font-size: 52px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #header-image-default {
+    height: 560px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #header-image-default {
+    height: 920px;
+  }
+}
+
