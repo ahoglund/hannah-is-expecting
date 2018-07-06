@@ -1,0 +1,14 @@
+<%= content_tag :header, nil, class: "py-5 bg-image-full", id: "header-image-landing" do %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <%= content_tag :h1, t(:adoption_is_our_destiny), class: "display-1 text-dark" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <%= link_to "Learn More", our_story_path, class: "btn btn-warning" %>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,6 +1,7 @@
-<%= form_for @photo, url: admin_photos_path do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_area :description %>
-  <%= f.file_field :image %>
-  <%= f.submit %>
+<%= render "photos_header" %>
+<%= simple_form_for @photo, url: admin_photos_path do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :image, as: :file %>
+  <%= f.button :submit, class: "btn btn-success" %>
 <% end %>

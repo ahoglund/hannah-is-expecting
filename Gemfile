@@ -20,8 +20,8 @@ gem "font-awesome-rails"
 gem 'devise'
 gem "aws-sdk-s3", require: false
 gem 'image_processing', '~> 1.2'
-
 gem 'pg'
+gem 'simple_form'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

@@ -1,11 +1,11 @@
-<%= content_for(:header_image) do %>
-  <%= content_tag :header, nil, class: "py-5 bg-image-full", id: "header-image-photos" do %>
-    <div class="container">
-      <div class="row">
-        <div class="offset-sm-2 col-sm-4">
-          <%= content_tag :h1, t(:photos), class: "display-4 text-light" %>
-        </div>
-      </div>
+<%= render "photos_header" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <% @photos.each do |photo| %>
+        <%= image_tag photo.image.variant(resize: "300x300"), class: "float-left img-thumbnail" %>
+      <% end %>
     </div>
-  <% end %>
-<% end %>
+  </div>
+</div>
