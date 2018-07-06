@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   get "/our_home",    to: "pages#our_home"
   get "/photos",      to: "photos#index"
   get "/contact",     to: "pages#contact"
+
+  namespace :admin do
+    resources :photos, only: [:show, :new, :create]
+  end
 end
