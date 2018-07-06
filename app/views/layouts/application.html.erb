@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><%= @page_title.html_safe %></title>
+    <title><%= (@page_title || "Welcome").html_safe %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
