@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: "pages#index"
 
   get "/our_story",   to: "pages#our_story"
