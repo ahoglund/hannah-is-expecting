@@ -1,11 +1,15 @@
 <%= render "photos_header" %>
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <% @photos.each do |photo| %>
-        <%= image_tag photo.image.variant(resize: "300x300"), class: "float-left img-thumbnail" %>
-      <% end %>
+  <% @albums.each do |album| %>
+    <div class="row">
+      <div class="col-sm-12">
+        <h1> <%= album.title %> </h1>
+        <% album.photos.each do |photo| %>
+          <%= image_tag photo.image.variant(resize: "200x200"), class: "float-left img-thumbnail" %>
+        <% end %>
+      </div>
     </div>
-  </div>
+    <hr>
+  <% end %>
 </div>

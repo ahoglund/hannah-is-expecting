@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   def index
     @page_title = "Photos"
-    @photos = Photo.all
+    @albums = Album.eager_load(:photos).all
   end
 end
