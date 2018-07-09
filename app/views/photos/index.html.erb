@@ -5,10 +5,12 @@
     <div class="row">
       <div class="col-sm-12">
         <h1> <%= album.title %> </h1>
-        <% album.photos.each do |photo| %>
-          <%= image_tag photo.image.variant(resize: "200x200"), class: "float-left img-thumbnail" %>
-        <% end %>
       </div>
+      <% album.photos.each do |photo| %>
+        <div class="col-sm-4">
+          <%= link_to((image_tag photo.image.variant(resize: "200x200")), (url_for(photo.image)), class: "float-left img-thumbnail", data: {lightbox: album.title, title: photo.title}) %>
+        </div>
+      <% end %>
     </div>
     <hr>
   <% end %>
