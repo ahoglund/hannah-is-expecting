@@ -31,7 +31,15 @@
           <% link_to t(:contact), contact_path, class: "nav-link" %>
         <% end %>
         <% if user_signed_in? %>
-          <%= button_to t(:sign_out), destroy_user_session_path, method: :delete, class: "btn btn-warning" %>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-cog"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <%= link_to t(:upload_photo), new_admin_photo_path, class: "dropdown-item" %>
+              <%= link_to t(:sign_out), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+          </div>
         <% end %>
       </ul>
     </div>

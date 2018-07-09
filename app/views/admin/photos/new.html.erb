@@ -3,5 +3,6 @@
   <%= f.input :title %>
   <%= f.input :description %>
   <%= f.input :image, as: :file %>
+  <%= f.association :albums, as: :check_boxes %>
   <%= f.button :submit, class: "btn btn-success" %>
 <% end %>

@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Album.delete_all
+
+[ "Gisel & Drew", "Family", "Home", "Travels"].each do |title|
+  Album.create(title: title)
+end

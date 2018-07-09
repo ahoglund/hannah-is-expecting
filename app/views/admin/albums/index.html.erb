@@ -1,0 +1,4 @@
+<%= render "photos_header" %>
+<% @albums.each do |album| %>
+  <%= link_to  album.title, admin_album_path(album) %>
+<% end %>

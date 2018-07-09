@@ -1,0 +1,7 @@
+<%= render "photos_header" %>
+<h1><%= @album.title %></h1>
+
+<% @album.photos.each do |photo| %>
+  <h3><%= photo.title %></h3>
+  <%= image_tag photo.image.variant(resize: "600x600") %>
+<% end %>
