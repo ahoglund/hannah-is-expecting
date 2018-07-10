@@ -15,5 +15,5 @@
 //= require activestorage
 //= require turbolinks
 //= require bootstrap/dist/js/bootstrap
-//= require lightbox
+//= require lightbox2/dist/js/lightbox
 //= require_tree .
