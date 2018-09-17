@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/our_family",  to: "pages#our_family"
   get "/our_home",    to: "pages#our_home"
   get "/photos",      to: "photos#index"
+  get "/photos/instagram",      to: "photos#instagram"
   get "/contact",     to: "pages#contact"
 
   namespace :admin do
