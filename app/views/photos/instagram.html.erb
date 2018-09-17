@@ -1,19 +1,8 @@
-
 <%= render "photos_header" %>
 
 <div class="container">
     <div class="row">
-  <% @media.each do |media_item| %>
-      <div class="col-sm-4">
-        <% debug media_item %>
-        <figure class="figure">
-        <%= link_to((image_tag media_item.images.low_resolution.url), (media_item.images.standard_resolution.url), class: "float-left img-thumbnail mb-1", data: {lightbox: media_item.id, title: media_item.caption.text.split(".\n.\n.\n.").first }) %>
-        <figcaption class="figure-caption">
-          <%= media_item.caption.text.split(".\n.\n.\n.").first.truncate(200) %>
-        </figcaption>
-        </figure>
-      </div>
-  <% end %>
+      <%= render partial: "instagram" %>
     </div>
     <hr>
 </div>
