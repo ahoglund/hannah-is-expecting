@@ -13,7 +13,7 @@
   <div class="mx-auto col-sm-8">
     <h2>Our Story</h2>
     <p class="text-justify">
-    <%= image_tag Album.find_by(title: "Gisel & Drew").photos.offset(rand(User.count)).first.image.variant(resize: "300"), class: "float-left img-thumbnail m-3" %>
+    <%= image_tag random_picture_from(album: "Gisel & Drew"), class: "float-left img-thumbnail m-3" %>
     Welcome! We are Gisel and Drew and we live in New York City.
     </p>
     <p class="text-justify">
