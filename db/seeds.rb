@@ -11,3 +11,9 @@ Album.delete_all
 [ "Gisel & Drew", "Family", "Home", "Travels"].each do |title|
   Album.create(title: title)
 end
+
+user = User.new
+user.email = 'test@example.com'
+user.password = 'password'
+user.password_confirmation = 'password'
+user.save!
